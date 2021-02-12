@@ -1,0 +1,2061 @@
+{
+  "SEO": {
+    "seoTitle": {
+      "type": "Text",
+      "config": {
+        "label": "Page title"
+      }
+    },
+    "seoDescription": {
+      "type": "Text",
+      "config": {
+        "label": "Page description"
+      }
+    },
+    "seoBody": {
+      "type": "Slices",
+      "config": {
+        "choices": {
+          "metaField": {
+            "type": "Slice",
+            "fieldset": "Meta field",
+            "description": "Add addition meta info for page",
+            "icon": "search",
+            "display": "list",
+            "non-repeat": {
+              "metaName": {
+                "type": "Text",
+                "config": {
+                  "label": "Meta name"
+                }
+              },
+              "metaContent": {
+                "type": "Text",
+                "config": {
+                  "label": "Meta content"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  },
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Document UID"
+      }
+    },
+    "itemCardConfiguration": {
+      "type": "Link",
+      "config": {
+        "label": "Item card configuration",
+        "select": "document",
+        "customtypes": [
+          "item_card_configuration"
+        ]
+      }
+    },
+    "type": {
+      "type": "Select",
+      "config": {
+        "label": "Catalog type",
+        "options": [
+          "Auction",
+          "Store",
+          "Mixed"
+        ],
+        "default_value": "Auction"
+      }
+    },
+    "sold": {
+      "type": "Select",
+      "config": {
+        "label": "Sold type",
+        "options": [
+          "Unsold",
+          "Sold",
+          "Mixed"
+        ],
+        "default_value": "Unsold"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Compositions",
+      "config": {
+        "choices": {
+          "auctionPromotion": {
+            "type": "Slice",
+            "fieldset": "Auction Promotion",
+            "description": "With the auction Promotion you can display all your latest auctions",
+            "icon": "filter",
+            "display": "list",
+            "non-repeat": {
+              "defaultTitleOfBanner": {
+                "type": "Text",
+                "config": {
+                  "label": "Fallback title"
+                }
+              },
+              "defaultDescription": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Fallback description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "defaultImageBanner": {
+                "type": "Image",
+                "config": {
+                  "label": "Fallback image banner",
+                  "thumbnails": []
+                }
+              },
+              "showAuctionDates": {
+                "type": "Select",
+                "config": {
+                  "label": "Show dates on auction",
+                  "options": [
+                    "True",
+                    "False"
+                  ],
+                  "default_value": "True"
+                }
+              },
+              "showAuctionStatus": {
+                "type": "Select",
+                "config": {
+                  "label": "Show status on auction",
+                  "options": [
+                    "True",
+                    "False"
+                  ],
+                  "default_value": "True"
+                }
+              },
+              "autoplaySlider": {
+                "type": "Select",
+                "config": {
+                  "label": "Autoplay slider",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "slimAuctionHero": {
+                "type": "Select",
+                "config": {
+                  "label": "Display slim version of auction promotion",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "liveAuctionPromotion": {
+            "type": "Slice",
+            "fieldset": "LiveAuctionPromo",
+            "description": "Highlights an ongoing live auction",
+            "icon": "image",
+            "display": "list",
+            "non-repeat": {
+              "showCurrentLot": {
+                "type": "Select",
+                "config": {
+                  "label": "Show current lot ",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "blogPromotion": {
+            "type": "Slice",
+            "fieldset": "Blog Promotion",
+            "description": "With the blog promotion you can display all your latest blog pages",
+            "icon": "filter",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Header"
+                }
+              },
+              "limit": {
+                "type": "Number",
+                "config": {
+                  "label": "Limit the number of posts shown"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "ctaCollection": {
+            "type": "Slice",
+            "fieldset": "CTA Collection",
+            "description": "Displays a collection of CTAs",
+            "icon": "collections_bookmark",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "headingVariant": {
+                "type": "Select",
+                "config": {
+                  "label": "Heading variant",
+                  "options": [
+                    "heading1",
+                    "kicker"
+                  ],
+                  "default_value": "kicker"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "CTA description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "itemsPerRowDesktop": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on desktop"
+                }
+              },
+              "itemsPerRowMobile": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on mobile"
+                }
+              },
+              "itemsPerRowTablet": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on tablet"
+                }
+              },
+              "slider": {
+                "type": "Select",
+                "config": {
+                  "label": "Slider",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "gridBottomButtonLinkLabel": {
+                "type": "Text",
+                "config": {
+                  "label": "Bottom grid button link label"
+                }
+              },
+              "gridBottomButtonLink": {
+                "type": "Link",
+                "config": {
+                  "label": "Bottom grid button link"
+                }
+              },
+              "viewType": {
+                "type": "Select",
+                "config": {
+                  "label": "View type",
+                  "options": [
+                    "Single",
+                    "Grid"
+                  ],
+                  "default_value": "Single"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "ctaText": {
+                "type": "Text",
+                "config": {
+                  "label": "CTA text"
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text"
+                }
+              },
+              "ctaImage": {
+                "type": "Image",
+                "config": {
+                  "label": "CTA image",
+                  "thumbnails": []
+                }
+              },
+              "ctaLink": {
+                "type": "Link",
+                "config": {
+                  "label": "CTA link"
+                }
+              },
+              "headingColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Heading color"
+                }
+              },
+              "descriptionColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Description color"
+                }
+              }
+            }
+          },
+          "galleryCollection": {
+            "type": "Slice",
+            "fieldset": "Gallery Collection",
+            "description": "Displays a collection of gallery items",
+            "icon": "collections_bookmark",
+            "display": "list",
+            "non-repeat": {
+              "itemsPerRowDesktop": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on desktop"
+                }
+              },
+              "itemsPerRowMobile": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on mobile"
+                }
+              },
+              "itemsPerRowTablet": {
+                "type": "Number",
+                "config": {
+                  "label": "Items per row on tablet"
+                }
+              }
+            },
+            "repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Gallery Item Heading"
+                }
+              },
+              "details": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Gallery Item Details",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Gallery Item image",
+                  "thumbnails": []
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Gallery Item link"
+                }
+              },
+              "textColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Text color"
+                }
+              }
+            }
+          },
+          "hero": {
+            "type": "Slice",
+            "fieldset": "Hero",
+            "description": "Displays content in a grand way",
+            "icon": "image",
+            "display": "list",
+            "non-repeat": {
+              "titleOfBanner": {
+                "type": "Text",
+                "config": {
+                  "label": "Title of banner"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "buttonLinkLabel": {
+                "type": "Text",
+                "config": {
+                  "label": "Button link label"
+                }
+              },
+              "buttonLink": {
+                "type": "Link",
+                "config": {
+                  "label": "Button link"
+                }
+              },
+              "imageBanner": {
+                "type": "Image",
+                "config": {
+                  "label": "Image banner",
+                  "thumbnails": []
+                }
+              },
+              "autoplaySlider": {
+                "type": "Select",
+                "config": {
+                  "label": "Slider autoplay",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "descriptionVariant": {
+                "type": "Select",
+                "config": {
+                  "label": "Description variant",
+                  "options": [
+                    "Default",
+                    "Quote"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "textAligment": {
+                "type": "Select",
+                "config": {
+                  "label": "Text aligment inside content block",
+                  "options": [
+                    "center",
+                    "left"
+                  ],
+                  "default_value": "center"
+                }
+              },
+              "textColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Text color inside content block"
+                }
+              },
+              "overlayBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Content block overlay color (leave empty for hidding overlay)"
+                }
+              },
+              "textBlockAligment": {
+                "type": "Select",
+                "config": {
+                  "label": "Text block aligment",
+                  "options": [
+                    "center",
+                    "left",
+                    "right"
+                  ],
+                  "default_value": "center"
+                }
+              },
+              "splitImageLayout": {
+                "type": "Select",
+                "config": {
+                  "label": "Display 50/50 text/image layout",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Hero title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Hero description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "imageBanner": {
+                "type": "Image",
+                "config": {
+                  "label": "Image banner",
+                  "thumbnails": []
+                }
+              },
+              "buttonLinkLabel": {
+                "type": "Text",
+                "config": {
+                  "label": "Button link label"
+                }
+              },
+              "buttonLink": {
+                "type": "Link",
+                "config": {
+                  "label": "Button link"
+                }
+              },
+              "textAligment": {
+                "type": "Select",
+                "config": {
+                  "label": "Text aligment inside content block",
+                  "options": [
+                    "center",
+                    "left"
+                  ],
+                  "default_value": "center"
+                }
+              },
+              "textColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Text color inside content block"
+                }
+              },
+              "overlayBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Content block overlay color (leave empty for hidding overlay)"
+                }
+              },
+              "splitImageLayout": {
+                "type": "Select",
+                "config": {
+                  "label": "Display 50/50 text/image layout",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "textBlockAligment": {
+                "type": "Select",
+                "config": {
+                  "label": "Text block aligment",
+                  "options": [
+                    "center",
+                    "left",
+                    "right"
+                  ],
+                  "default_value": "center"
+                }
+              }
+            }
+          },
+          "itemPromotion": {
+            "type": "Slice",
+            "fieldset": "Item promotion",
+            "description": "Promotes a set of items",
+            "icon": "filter",
+            "display": "list",
+            "non-repeat": {
+              "numberOfItemsPerPage": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per page"
+                }
+              },
+              "numberOfItemsPerRowDesktop": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on desktop"
+                }
+              },
+              "itemsPerRowTable": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on tablet"
+                }
+              },
+              "itemsPerRowMobile": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on mobile"
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "titleVariant": {
+                "type": "Select",
+                "config": {
+                  "label": null,
+                  "options": [
+                    "heading1",
+                    "kicker"
+                  ],
+                  "default_value": "kicker"
+                }
+              },
+              "auctionIds": {
+                "type": "Text",
+                "config": {
+                  "label": "Auction ids to filter items by"
+                }
+              },
+              "categoryIds": {
+                "type": "Text",
+                "config": {
+                  "label": "Category ids to filter items by"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Promotion description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "typeOfItem": {
+                "type": "Select",
+                "config": {
+                  "label": "Type of item",
+                  "options": [
+                    "Auction",
+                    "Store"
+                  ],
+                  "default_value": "Auction"
+                }
+              },
+              "featuredItems": {
+                "type": "Select",
+                "config": {
+                  "label": "Featured items",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "sortOn": {
+                "type": "Select",
+                "config": {
+                  "label": "Sort on",
+                  "options": [
+                    "Lot - Lowest Lot number",
+                    "Lot - Highest Lot number",
+                    "Store price - Highest",
+                    "Store price - Lowest",
+                    "Bids - Most",
+                    "Bids - Least",
+                    "Bids - Highest",
+                    "Bids - Lowest",
+                    "Bids - Most recent",
+                    "Date - Newest",
+                    "Date - Oldest",
+                    "Date - End soon",
+                    "Watched - Most"
+                  ],
+                  "default_value": "Lot - Lowest Lot number"
+                }
+              },
+              "itemCardConfiguration": {
+                "type": "Link",
+                "config": {
+                  "label": "Item card configuration",
+                  "select": "document",
+                  "customtypes": [
+                    "item_card_configuration"
+                  ]
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "featuredItemPromotion": {
+            "type": "Slice",
+            "fieldset": "Featured Item promotion",
+            "description": "Promotes a set of random featured items",
+            "icon": "filter",
+            "display": "list",
+            "non-repeat": {
+              "numberOfItemsPerPage": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per page"
+                }
+              },
+              "numberOfItemsPerRowDesktop": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on desktop"
+                }
+              },
+              "itemsPerRowTable": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on tablet"
+                }
+              },
+              "itemsPerRowMobile": {
+                "type": "Number",
+                "config": {
+                  "label": "Number of items per row on mobile"
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "titleVariant": {
+                "type": "Select",
+                "config": {
+                  "label": null,
+                  "options": [
+                    "heading1",
+                    "kicker"
+                  ],
+                  "default_value": "kicker"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Promotion description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "typeOfItem": {
+                "type": "Select",
+                "config": {
+                  "label": "Type of item",
+                  "options": [
+                    "Auction",
+                    "Store"
+                  ],
+                  "default_value": "Auction"
+                }
+              },
+              "itemCardConfiguration": {
+                "type": "Link",
+                "config": {
+                  "label": "Item card configuration",
+                  "select": "document",
+                  "customtypes": [
+                    "item_card_configuration"
+                  ]
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "subscriptionForm": {
+            "type": "Slice",
+            "fieldset": "Subscription Form",
+            "description": "Subscribe to newsletter",
+            "icon": "announcement",
+            "display": "list",
+            "non-repeat": {
+              "header": {
+                "type": "Text",
+                "config": {
+                  "label": "Header"
+                }
+              },
+              "headerVariant": {
+                "type": "Select",
+                "config": {
+                  "label": "Header variant",
+                  "options": [
+                    "heading1",
+                    "heading2",
+                    "smallTitle",
+                    "bigTitle"
+                  ],
+                  "default_value": "heading2"
+                }
+              },
+              "headerFontStyle": {
+                "type": "Select",
+                "config": {
+                  "label": "Header font style",
+                  "options": [
+                    "normal",
+                    "italic"
+                  ],
+                  "default_value": "italic"
+                }
+              },
+              "showSubscriptionListSelect": {
+                "type": "Select",
+                "config": {
+                  "label": "Display select menu for topics on subscription form (if true, add select menu options in repeatable block)",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "emailProvider": {
+                "type": "Select",
+                "config": {
+                  "label": "Email provider type",
+                  "options": [
+                    "mailChimp",
+                    "constantContact"
+                  ],
+                  "default_value": "mailChimp"
+                }
+              },
+              "mailchimpListId": {
+                "type": "Text",
+                "config": {
+                  "label": "List ID on mailchimp"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "subscriptionListOptionLabel": {
+                "type": "Text",
+                "config": {
+                  "label": "Subscription list label"
+                }
+              },
+              "subscriptionListOptionId": {
+                "type": "Text",
+                "config": {
+                  "label": "Subscription list id"
+                }
+              }
+            }
+          },
+          "qAndA": {
+            "type": "Slice",
+            "fieldset": "Q&A",
+            "description": "Questions and answers",
+            "icon": "live_help",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "question": {
+                "type": "Text",
+                "config": {
+                  "label": "Question"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              }
+            }
+          },
+          "textList": {
+            "type": "Slice",
+            "fieldset": "Text List",
+            "description": "List of text",
+            "icon": "text_fields",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Text",
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              }
+            }
+          },
+          "location": {
+            "type": "Slice",
+            "fieldset": "Location",
+            "description": "Display the location",
+            "icon": "location_on",
+            "display": "list",
+            "non-repeat": {
+              "locationTitle": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Location title",
+                  "multi": "paragraph, strong, em, hyperlink"
+                }
+              },
+              "address": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Address",
+                  "multi": "paragraph, strong, em, hyperlink"
+                }
+              },
+              "geopoint": {
+                "type": "GeoPoint",
+                "config": {
+                  "label": "Geopoint"
+                }
+              },
+              "openingHours": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Opening hours",
+                  "multi": "paragraph, strong, em, hyperlink"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "emailForm": {
+            "type": "Slice",
+            "fieldset": "Email form",
+            "description": "Allows the user to send an email to a configured email address",
+            "icon": "email",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "receivingEmailAddress": {
+                "type": "Select",
+                "config": {
+                  "label": "Receiving email address",
+                  "options": [
+                    "Ask A Question",
+                    "Appraisals",
+                    "Catalog Request",
+                    "ConsignWithUs"
+                  ],
+                  "default_value": "Ask A Question"
+                }
+              },
+              "subjectPrefill": {
+                "type": "Text",
+                "config": {
+                  "label": "Subject prefill"
+                }
+              },
+              "messagePrefill": {
+                "type": "Text",
+                "config": {
+                  "label": "Message prefill"
+                }
+              },
+              "absenteePhoneBid": {
+                "type": "Select",
+                "config": {
+                  "label": "Absentee/Phone bids",
+                  "options": [
+                    "False",
+                    "True"
+                  ],
+                  "default_value": "False"
+                }
+              },
+              "absenteePhoneBidInfo": {
+                "type": "Text",
+                "config": {
+                  "label": "Informative text on how you handle absentee and phone bidding"
+                }
+              },
+              "absenteeTermsAndConditions": {
+                "type": "Text",
+                "config": {
+                  "label": "Absentee Terms and Conditions"
+                }
+              },
+              "absenteePolicy": {
+                "type": "Text",
+                "config": {
+                  "label": "Absentee Policy"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "teamProfile": {
+            "type": "Slice",
+            "fieldset": "Team profile",
+            "description": "Team profile",
+            "icon": "account_circle",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Title",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "firstAndLastname": {
+                "type": "Text",
+                "config": {
+                  "label": "First and last name"
+                }
+              },
+              "email": {
+                "type": "Text",
+                "config": {
+                  "label": "Email"
+                }
+              },
+              "phone": {
+                "type": "Text",
+                "config": {
+                  "label": "Phone"
+                }
+              },
+              "position": {
+                "type": "Text",
+                "config": {
+                  "label": "Position"
+                }
+              },
+              "portrait": {
+                "type": "Image",
+                "config": {
+                  "label": "Portrait",
+                  "thumbnails": []
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "Slice",
+            "fieldset": "Text",
+            "description": "Text",
+            "icon": "text_fields",
+            "display": "list",
+            "non-repeat": {
+              "textAlign": {
+                "type": "Select",
+                "config": {
+                  "label": "Text Alignment",
+                  "options": [
+                    "left",
+                    "center",
+                    "right",
+                    "revert",
+                    "justify"
+                  ]
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Text",
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "video": {
+            "type": "Slice",
+            "fieldset": "Video",
+            "description": "Video",
+            "icon": "ondemand_video",
+            "display": "list",
+            "non-repeat": {
+              "videoLink": {
+                "type": "Embed",
+                "config": {
+                  "label": "Video link"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "itemInquiry": {
+            "type": "Slice",
+            "fieldset": "Item inquiry",
+            "description": "Allows the user to request a viewing of certain item",
+            "icon": "question_answer",
+            "display": "list",
+            "non-repeat": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              },
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item"
+                }
+              },
+              "subject": {
+                "type": "Text",
+                "config": {
+                  "label": "Subject"
+                }
+              },
+              "receivingEmailAddress": {
+                "type": "Select",
+                "config": {
+                  "label": "Receiving email address",
+                  "options": [
+                    "Ask A Question",
+                    "Appraisals",
+                    "Catalog Request",
+                    "ConsignWithUs"
+                  ],
+                  "default_value": "Ask A Question"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "quote": {
+            "type": "Slice",
+            "fieldset": "Quote",
+            "description": "Quote",
+            "icon": "format_quote",
+            "display": "list",
+            "non-repeat": {
+              "heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Heading"
+                }
+              },
+              "autoplaySlider": {
+                "type": "Select",
+                "config": {
+                  "label": "Autoplay slider",
+                  "options": [
+                    "True",
+                    "False"
+                  ],
+                  "default_value": "True"
+                }
+              },
+              "quoteSliderBlockHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Height of slider quote block"
+                }
+              },
+              "quote": {
+                "type": "Text",
+                "config": {
+                  "label": "Quote"
+                }
+              },
+              "nameOfTheAuthor": {
+                "type": "Text",
+                "config": {
+                  "label": "Name of the author"
+                }
+              },
+              "portraitAuthor": {
+                "type": "Image",
+                "config": {
+                  "label": "Portrait of Author",
+                  "thumbnails": []
+                }
+              },
+              "positionOfAuthor": {
+                "type": "Text",
+                "config": {
+                  "label": "Position of the author"
+                }
+              },
+              "sectionType": {
+                "type": "Select",
+                "config": {
+                  "label": "Section type",
+                  "options": [
+                    "Default",
+                    "Fill"
+                  ],
+                  "default_value": "Default"
+                }
+              },
+              "sectionBackgroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section background color"
+                }
+              },
+              "sectionBackgroundColorOpacity": {
+                "type": "Number",
+                "config": {
+                  "label": "Section background color opacity (0 - 100)"
+                }
+              },
+              "sectionBackgroundImage": {
+                "type": "Image",
+                "config": {
+                  "label": "Section background image",
+                  "thumbnails": []
+                }
+              },
+              "sectionBackgroundVideo": {
+                "type": "Link",
+                "config": {
+                  "label": "Section background video",
+                  "select": "media"
+                }
+              },
+              "sectionForegroundColor": {
+                "type": "Color",
+                "config": {
+                  "label": "Section foreground color"
+                }
+              },
+              "sectionMinHeight": {
+                "type": "Number",
+                "config": {
+                  "label": "Section minimum height"
+                }
+              }
+            },
+            "repeat": {
+              "quote": {
+                "type": "Text",
+                "config": {
+                  "label": "Quote"
+                }
+              },
+              "nameOfTheAuthor": {
+                "type": "Text",
+                "config": {
+                  "label": "Name of the author"
+                }
+              },
+              "portraitAuthor": {
+                "type": "Image",
+                "config": {
+                  "label": "Portrait of Author",
+                  "thumbnails": []
+                }
+              },
+              "positionOfAuthor": {
+                "type": "Text",
+                "config": {
+                  "label": "Position of the author"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
